@@ -1,0 +1,18 @@
+{%- props value, disabled = false -%}
+{%- set _hui_accordion_item_open = value in _hui_accordion_open_values|default([]) -%}
+{%- set _hui_accordion_item_disabled = disabled or _hui_accordion_disabled|default(false) -%}
+{%- set _hui_accordion_item_header_id = hui_id('accordion-header') -%}
+<details
+    data-slot="accordion-item"
+    data-hui-accordion-target="item"
+    data-action="toggle->hui-accordion#toggled"
+    data-value="{{ value }}"
+    data-state="{{ _hui_accordion_item_open ? 'open' : 'closed' }}"
+    {% if _hui_accordion_item_open %}open{% endif %}
+    {% if not _hui_accordion_multiple|default(false) %}name="{{ _hui_accordion_name|default('') }}"{% endif %}
+    {% if _hui_accordion_item_disabled %}data-hui-disabled=""{% endif %}
+    class="{{ hui('accordion-item').apply({}, attributes.render('class'))|tailwind_merge }}"
+    {{ attributes }}
+>
+    {%- block content %}{% endblock -%}
+</details>

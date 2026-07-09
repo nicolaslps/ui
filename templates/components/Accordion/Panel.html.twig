@@ -1,0 +1,12 @@
+{%- props as = 'div' -%}
+<{{ as }}
+    data-slot="accordion-panel"
+    data-hui-accordion-target="content"
+    data-state="{{ _hui_accordion_item_open|default(false) ? 'open' : 'closed' }}"
+    role="region"
+    {% if _hui_accordion_item_header_id is defined %}aria-labelledby="{{ _hui_accordion_item_header_id }}"{% endif %}
+    class="{{ hui('accordion-panel').apply({}, attributes.render('class'))|tailwind_merge }}"
+    {{ attributes }}
+>
+    {%- block content %}{% endblock -%}
+</{{ as }}>

@@ -1,0 +1,9 @@
+{%- props variant = 'primary', size = 'md', as = 'button' -%}
+{%- set style = hui('button') -%}
+<{{ as }}
+    data-slot="button"
+    class="{{ style.apply({variant: variant, size: size}, attributes.render('class'))|tailwind_merge }}"
+    {{ attributes }}
+>
+    {%- block content %}{% endblock -%}
+</{{ as }}>

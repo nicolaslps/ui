@@ -1,0 +1,13 @@
+@theme {
+  --ease-spring: linear(
+    0, 0.0751, 0.2266, 0.3895, 0.5357, 0.656, 0.75, 0.821, 0.8734, 0.9113,
+    0.9383, 0.9574, 0.9707, 0.98, 0.9864, 0.9908, 0.9938, 0.9958, 0.9972,
+    0.9981, 0.9987, 1
+  );
+  --duration-spring: 450ms;
+}
+
+@utility duration-spring {
+  --tw-duration: var(--duration-spring);
+  transition-duration: var(--duration-spring);
+}

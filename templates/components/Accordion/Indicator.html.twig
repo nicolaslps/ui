@@ -1,0 +1,13 @@
+{%- props as = 'span' -%}
+<{{ as }}
+    data-slot="accordion-indicator"
+    data-hui-accordion-target="indicator"
+    data-state="{{ _hui_accordion_item_open|default(false) ? 'open' : 'closed' }}"
+    aria-hidden="true"
+    class="{{ hui('accordion-indicator').apply({}, attributes.render('class'))|tailwind_merge }}"
+    {{ attributes }}
+>
+    {%- block content -%}
+        <twig:ux:icon name="lucide:chevron-down" class="size-4" />
+    {%- endblock -%}
+</{{ as }}>

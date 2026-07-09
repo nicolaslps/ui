@@ -1,0 +1,17 @@
+/* Declares the theme variables - @see https://tailwindcss.com/docs/theme */
+@import "../shared/theme.css";
+
+/* Shared motion tokens */
+@import "../shared/animations.css";
+
+/* Default Theme */
+@import "./variables.css" layer(theme);
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
