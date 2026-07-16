@@ -1,0 +1,10 @@
+{%- props variant = 'default', color = null, as = 'div' -%}
+{%- set style = hui('alert') -%}
+<{{ as }}
+    data-slot="alert"
+    role="alert"
+    class="{{ style.apply({variant: variant, color: color ?? ''}, attributes.render('class'))|tailwind_merge }}"
+    {{ attributes }}
+>
+    {%- block content %}{% endblock -%}
+</{{ as }}>
