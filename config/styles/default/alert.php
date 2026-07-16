@@ -64,7 +64,7 @@ return [
         base: "flex gap-1",
         variants: [
             'inline' => [
-                'true' => "@max-lg/alert:mt-2 @max-lg/alert:col-start-1 @max-lg/alert:-col-end-1 @max-lg/alert:[svg~&]:col-start-2 @lg/alert:col-start-[-2] @lg/alert:row-start-1 @lg/alert:row-end-3 @lg/alert:self-center",
+                'true' => "@max-lg/alert:mt-2 @max-lg/alert:col-start-1 @max-lg/alert:-col-end-1 @max-lg/alert:[svg~&]:col-start-2 @lg/alert:-col-start-2 @lg/alert:row-start-1 @lg/alert:row-end-3 @lg/alert:self-center",
                 'false' => "mt-2 col-start-1 -col-end-1 [svg~&]:col-start-2",
             ],
         ],
