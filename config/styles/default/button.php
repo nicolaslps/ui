@@ -39,24 +39,48 @@ return [
                     "dark:hover:bg-muted/50",
                 ],
                 'danger' => [
+                    "bg-destructive text-white",
+                    "[a]:hover:bg-destructive/80",
+                    "focus-visible:border-destructive/40 focus-visible:ring-destructive/20",
+                    "dark:focus-visible:ring-destructive/40",
+                ],
+                'danger-soft' => [
                     "bg-destructive/10 text-destructive",
                     "hover:bg-destructive/20",
                     "focus-visible:border-destructive/40 focus-visible:ring-destructive/20",
                     "dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
                 ],
                 'info' => [
+                    "bg-info text-white",
+                    "[a]:hover:bg-info/80",
+                    "focus-visible:border-info/40 focus-visible:ring-info/20",
+                    "dark:focus-visible:ring-info/40",
+                ],
+                'info-soft' => [
                     "bg-info/10 text-info-foreground",
                     "hover:bg-info/20",
                     "focus-visible:border-info/40 focus-visible:ring-info/20",
                     "dark:bg-info/20 dark:hover:bg-info/30 dark:focus-visible:ring-info/40",
                 ],
                 'success' => [
+                    "bg-success text-neutral-950",
+                    "[a]:hover:bg-success/80",
+                    "focus-visible:border-success/40 focus-visible:ring-success/20",
+                    "dark:focus-visible:ring-success/40",
+                ],
+                'success-soft' => [
                     "bg-success/10 text-success-foreground",
                     "hover:bg-success/20",
                     "focus-visible:border-success/40 focus-visible:ring-success/20",
                     "dark:bg-success/20 dark:hover:bg-success/30 dark:focus-visible:ring-success/40",
                 ],
                 'warning' => [
+                    "bg-warning text-neutral-950",
+                    "[a]:hover:bg-warning/80",
+                    "focus-visible:border-warning/40 focus-visible:ring-warning/20",
+                    "dark:focus-visible:ring-warning/40",
+                ],
+                'warning-soft' => [
                     "bg-warning/10 text-warning-foreground",
                     "hover:bg-warning/20",
                     "focus-visible:border-warning/40 focus-visible:ring-warning/20",
