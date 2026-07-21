@@ -18,21 +18,20 @@ final readonly class ComponentStyle
     public array $variants;
 
     /**
-     * @param string|list<string> $base Classes always applied to the component
-     * @param array<string, array<string, string|list<string>>> $variants Map of category => { variant name => classes }
-     * @param list<array<string, string|list<string>>> $compoundVariants List of { category => matching variant(s), ..., 'class' => classes }
-     * @param array<string, string> $defaultVariants Map of category => variant name applied when no value is passed
+     * @param string|list<string>                               $base             Classes always applied to the component
+     * @param array<string, array<string, string|list<string>>> $variants         Map of category => { variant name => classes }
+     * @param list<array<string, string|list<string>>>          $compoundVariants List of { category => matching variant(s), ..., 'class' => classes }
+     * @param array<string, string>                             $defaultVariants  Map of category => variant name applied when no value is passed
      */
     public function __construct(
         string|array $base = '',
         array $variants = [],
         public array $compoundVariants = [],
         public array $defaultVariants = [],
-    )
-    {
+    ) {
         $this->base = self::join($base);
         $this->variants = array_map(
-            static fn(array $classes): array => array_map(self::join(...), $classes),
+            static fn (array $classes): array => array_map(self::join(...), $classes),
             $variants,
         );
     }
@@ -54,7 +53,7 @@ final readonly class ComponentStyle
             'variants' => $this->variants,
             'compound_variants' => $this->compoundVariants,
             'default_variants' => $this->defaultVariants,
-        ], static fn(string|array $value): bool => [] !== $value && '' !== $value);
+        ], static fn (string|array $value): bool => [] !== $value && '' !== $value);
     }
 
     /**
