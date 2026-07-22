@@ -17,6 +17,8 @@
   --color-border: var(--border);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-destructive: var(--destructive);
+  --color-danger-foreground: var(--destructive-foreground);
+  --color-danger: var(--destructive);
   --color-info-foreground: var(--info-foreground);
   --color-info: var(--info);
   --color-success-foreground: var(--success-foreground);
