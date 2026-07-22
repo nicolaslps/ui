@@ -1,8 +1,9 @@
 {%- props as = 'div' -%}
 <{{ as }}
-    data-slot="alert-title"
     class="{{ hui('alert-title').apply({}, attributes.render('class'))|tailwind_merge }}"
-    {{ attributes }}
+    {{ attributes.defaults({
+        'data-slot': 'alert-title',
+    }) }}
 >
     {%- block content %}{% endblock -%}
 </{{ as }}>
