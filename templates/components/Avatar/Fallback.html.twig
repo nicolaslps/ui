@@ -2,7 +2,7 @@
     class="{{ hui('avatar-fallback').apply({}, attributes.render('class'))|tailwind_merge }}"
     {{ attributes.defaults({
         'data-hui-avatar-target': 'fallback',
-        'data-slot': 'avatar-fallback'
+        'data-slot': 'avatar-fallback',
     }) }}
 >
     {%- block content %}{% endblock -%}

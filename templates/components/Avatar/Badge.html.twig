@@ -2,7 +2,7 @@
 <span
     class="{{ hui('avatar-badge').apply({position: position}, attributes.render('class'))|tailwind_merge }}"
     {{ attributes.defaults({
-        'data-slot': 'avatar-badge'
+        'data-slot': 'avatar-badge',
     }) }}
 >
     {%- block content %}{% endblock -%}

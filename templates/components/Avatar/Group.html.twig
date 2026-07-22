@@ -1,7 +1,7 @@
 <div
     class="{{ hui('avatar-group').apply({}, attributes.render('class'))|tailwind_merge }}"
     {{ attributes.defaults({
-        'data-slot': 'avatar-group'
+        'data-slot': 'avatar-group',
     }) }}
 >
     {%- block content %}{% endblock -%}
