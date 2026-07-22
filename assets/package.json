@@ -8,6 +8,12 @@
                 "name": "hui-accordion",
                 "fetch": "eager",
                 "enabled": true
+            },
+            "avatar": {
+                "main": "controllers/avatar_controller.js",
+                "name": "hui-avatar",
+                "fetch": "eager",
+                "enabled": true
             }
         },
         "importmap": {

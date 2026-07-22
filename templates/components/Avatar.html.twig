@@ -1,0 +1,11 @@
+{%- props size = 'default' -%}
+<span
+    class="{{ hui('avatar').apply({size: size}, attributes.render('class'))|tailwind_merge }}"
+    {{ attributes.defaults({
+        'data-slot': 'avatar',
+        'data-size': size,
+        'data-controller': 'hui-avatar'})
+    }}
+>
+    {%- block content %}{% endblock -%}
+</span>

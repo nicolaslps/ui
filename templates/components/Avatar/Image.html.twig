@@ -1,0 +1,9 @@
+<img
+    class="{{ hui('avatar-image').apply({}, attributes.render('class'))|tailwind_merge }}"
+    {{ attributes.defaults({
+        alt: '',
+        'data-hui-avatar-target': 'image',
+        'data-slot': 'avatar-image',
+        'data-action': 'load->hui-avatar#loaded'
+    }) }}
+/>
