@@ -1,9 +1,10 @@
 {%- props variant = 'default', size = 'md', as = 'span' -%}
 {%- set style = hui('badge') -%}
 <{{ as }}
-    data-slot="badge"
     class="{{ style.apply({variant: variant, size: size}, attributes.render('class'))|tailwind_merge }}"
-    {{ attributes }}
+    {{ attributes.defaults({
+        'data-slot': 'badge',
+    }) }}
 >
     {%- block content %}{% endblock -%}
 </{{ as }}>
