@@ -5,13 +5,14 @@
 {%- set _hui_accordion_disabled = disabled -%}
 {%- set _hui_accordion_name = name|default(hui_id('accordion')) -%}
 <{{ as }}
-    data-slot="accordion"
-    dir="{{ dir }}"
-    data-controller="hui-accordion"
-    data-hui-accordion-multiple-value="{{ multiple ? 'true' : 'false' }}"
-    data-hui-accordion-disabled-value="{{ disabled ? 'true' : 'false' }}"
     class="{{ hui('accordion').apply({}, attributes.render('class'))|tailwind_merge }}"
-    {{ attributes }}
+    {{ attributes.defaults({
+        'data-slot': 'accordion',
+        dir: dir,
+        'data-controller': 'hui-accordion',
+        'data-hui-accordion-multiple-value': multiple ? 'true' : 'false',
+        'data-hui-accordion-disabled-value': disabled ? 'true' : 'false',
+    }) }}
 >
     {%- block content %}{% endblock -%}
 </{{ as }}>
